@@ -1,15 +1,15 @@
 import React from 'react'
-import moviesAdapters from '../adapters/moviesAdaprtes'
+import { moviesAdapters } from '../adapters/moviesAdapters'
 
 export const ListOfMovies = ({movies}) => {
   const listMovies = moviesAdapters(movies)
-
+  console.log(listMovies)
   return (<ul>
             {listMovies.map(movie=>(
-              <li key={movie.imdbID}>
-                <h3>{movie.Title}</h3>
-                <p>{movie.Year}</p>
-                <img src={movie.Poster} alt={movie.Title}/>
+              <li key={movie.id}>
+                <h3>{movie.title}</h3>
+                <p>{movie.year}</p>
+                <img src={movie.poster} alt={movie.title}/>
               </li>
 
               ))
@@ -26,13 +26,12 @@ export const NoMovies = ()=>{
 
 
 export const Movies = ({movies}) =>{
-  
   const hasMovies = movies?.length > 0
   
   return <>
     {hasMovies ? 
-    <ListOfMovies movies={movies}></ListOfMovies>
-    : <NoMovies></NoMovies>
+    <ListOfMovies movies={movies}/>
+    : <NoMovies/>
   }
 
   </>

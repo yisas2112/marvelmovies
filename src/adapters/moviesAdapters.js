@@ -1,7 +1,7 @@
 
-const moviesAdapters = ({movies}) => {
-
-  movies?.map((movie)=>{
+export const moviesAdapters = (movies) => {
+  
+  let result = movies?.map((movie)=>{
     return {
       id : movie.imdbID,
       title: movie.Title,
@@ -9,6 +9,7 @@ const moviesAdapters = ({movies}) => {
       poster: movie.Poster    
     }
   })
+
+  return result
 }
 
-export default moviesAdapters
