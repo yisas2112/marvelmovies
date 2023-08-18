@@ -7,7 +7,7 @@ Key public = fc172ce5fcc79d79fafd9f2415175c9c
 Key Private = 1e1b33354fe84b57b4d1ff52d4dc205ffa06b695
 ts = 1
 
-hash = 886d4a53771cea3fe9cfe46f272ad258
+hash = 11e1b33354fe84b57b4d1ff52d4dc205ffa06b695fc172ce5fcc79d79fafd9f2415175c9c
 
 Final URL = http://gateway.marvel.com/v1/public/comics?ts=1&apikey=fc172ce5fcc79d79fafd9f2415175c9c&hash=886d4a53771cea3fe9cfe46f272ad258
 

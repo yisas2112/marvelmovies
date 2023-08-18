@@ -5,9 +5,9 @@ export const ListOfMovies = ({movies}) => {
   return (<ul className='movies'>
             {movies.map(movie=>(
               <li className='movie' key={movie.id}>
-                <h3>{movie.title}</h3>
-                <p>{movie.year}</p>
-                <img src={movie.poster} alt={movie.title}/>
+                <h3>{movie.name}</h3>
+                <img src={`${movie.thumbnail.path}.${movie.thumbnail.extension}`} alt={movie.title}/>
+                <p>{movie.description.length < 1 ? 'Sin Descripción' : movie.description}</p>
               </li>
 
               ))
