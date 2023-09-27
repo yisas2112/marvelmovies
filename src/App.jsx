@@ -1,9 +1,7 @@
-import { useEffect } from 'react'
 import './App.css'
 import { Movies } from './components/Movies'
 import {useMovies} from './components/hooks/UseMovies'
 import { useSearch } from './components/hooks/UseSearch'
-import axios from 'axios'
 
 function App() {  
   const {search, error, setSearch} = useSearch()
@@ -17,9 +15,6 @@ function App() {
   const handleSubmit = (event)=>{
     event.preventDefault()
     getMovies()
-
-
-
   }
 
   return  <div id='page'>

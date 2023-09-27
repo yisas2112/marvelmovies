@@ -1,15 +1,15 @@
 
 export const moviesAdapters = (movies) => {
-  let result = movies?.map((movie)=>{
+  let result = movies?.map((movie) => {
     return {
-      id : movie.id,
+      id: movie.id,
       name: movie.name,
-      description : movie.description,
-      thumbnail:  { 
-                    path: movie.thumbnail.path,
-                    extension : movie.thumbnail.extension,
-                  }
-          
+      description: movie.description,
+      thumbnail: {
+        path: movie.thumbnail.path,
+        extension: movie.thumbnail.extension,
+      }
+
     }
   })
 
