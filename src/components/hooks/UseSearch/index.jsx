@@ -3,11 +3,12 @@ import { useEffect, useRef, useState } from 'react'
 export const useSearch = () => {
   const [search, setSearch] = useState('')
   const [error, setError] = useState()
-  const isfirst = useRef(true)
+  const isfirstRenderInput = useRef(true)
 
   useEffect(()=>{
-    if(isfirst.current){
-      isfirst.current = search === ''
+    //Esta referencia es para que no empiece a validar apenas se carga la aplicación sino cuando el usuario interactua con él
+    if(isfirstRenderInput.current){
+      isfirstRenderInput.current = search === ''
       return
     }
     if(search === ''){
