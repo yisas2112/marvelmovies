@@ -5,7 +5,7 @@ import { useSearch } from "./components/hooks/UseSearch";
 
 function App() {
   const { search, error, setSearch } = useSearch();
-  const { movies, getMovies } = useMovies(search);
+  const { movies, getMovies, loading} = useMovies(search);
 
   const handleChange = (event) => {
     setSearch(event.target.value);
@@ -33,7 +33,8 @@ function App() {
       </header>
 
       <main>
-        <Movies movies={movies} />
+        
+        {loading ? <p>Cargando...</p> : <Movies movies={movies} />}
       </main>
     </div>
   );
